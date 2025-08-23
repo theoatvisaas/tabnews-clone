@@ -27,8 +27,8 @@ export default {
 };
 
 function getSSLValues() {
-  if (!!process.env.PROCESS_CA) {
-    return process.env.PROCESS_CA;
+  if (!!process.env.POSTGRES_CA) {
+    return process.env.POSTGRES_CA;
   }
 
   return process.env.NODE_ENV === "development" ? false : true;
